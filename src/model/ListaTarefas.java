@@ -13,4 +13,35 @@ public class ListaTarefas {
         proximoId++;
     }
 
+    public void concluirTarefa (int id){
+        for (Tarefa t : tarefas){
+        if (t.getId() == id){
+            t.concluir();
+            break;
+            }
+        }
+    }
+
+    public void reabrirTarefa(int id){
+        for (Tarefa t : tarefas){
+        if (t.getId() == id){
+            t.reabrir();
+            break;
+            }
+        }
+    }
+
+    public void remover(int id){
+    for (Tarefa t : tarefas){
+        if (t.getId() == id){
+            tarefas.remove(t);
+            break;
+            }
+        }
+    }
+
+    public List<Tarefa> listar() {
+    return tarefas;
+}
+    
 }
